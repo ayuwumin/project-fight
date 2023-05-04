@@ -42,3 +42,46 @@ class Sorcerer extends Character {
             this.maxLife = this.life
         }
 }
+
+
+class littleMonster extends Character {
+    constructor(){
+        super('Little Monster')
+        this.life = 40
+        this.attack = 4
+        this.defense = 4
+        this.maxLife = this.life
+    }
+}
+
+class bigMonster extends Character {
+    constructor(){
+        super('Big Monster')
+        this.life = 120
+        this.attack = 16
+        this.defense = 6
+        this.maxLife = this.life
+    }
+}
+
+class Stage {
+    constructor(fighter1, fighter2, fighterEl, fighterEl2){
+        this.fighter1 = fighter1
+        this.fighter2 = fighter2
+        this.fighterEl = fighterEl
+        this.fighterEl2 = fighterEl2
+    }
+
+    start(){
+        this.update()
+        // TODO evento do botão de atacar.
+    }
+
+    update(){
+       // fighter1
+       this.fighterEl.querySelector('.name').innerHTML = this.fighter1.name
+       
+       //fighter2
+       this.fighter2El.querySelector('.name').innerHTML = this.fighter2.name
+    }
+}
