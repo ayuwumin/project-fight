@@ -1,14 +1,11 @@
-let log = new log(document.querySelector('.log'))
-let char = new Knight('Kaveh')
-let monster = new littleMonster()
+const char = createKnight ('Knight')
+const monster = littleMonster()
 
 
-const stage = new Stage(
+stage.start(
     char,
     monster,
     document.querySelector('#char'),
-    document.querySelector('#monster'),
-    log
+    document.querySelector('#monster')
 )
 
-stage.start()
